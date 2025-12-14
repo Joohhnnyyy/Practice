@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body , html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: gray;
+}
+
+h1{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 100px;
+}
+
+button{
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,280 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+main{
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.921);
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr;
+    grid-template-rows: 13% 50% 10% 1fr;
+    grid-template-areas:
+    "nav nav nav"
+    "text image1 image1"
+    "but image2 image3"
+    "footer image2 image3";
+    gap: 10px;
+
+
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    grid-area: nav;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+
+}
+nav h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#left{
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    justify-content: center;
+    gap: 10px;
+}
+#center{
+    background-color: white;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    pad: 10px 20px;
+}
+#center a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+#right{
+    display: flex;
+    background-color: white;
+    width: 230px;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#right h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+#login{
+    background-color: rgba(0, 0, 0, 0.861);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 40px;
+    position: relative;
+    width: 90px;
+    height: 50px;
+}
+#login h1{
+    font-size: 17px;
+    position: absolute;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+
+}
+
+
+#text{
+    padding: 20px;
+    grid-area: text;
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    display: inline-block;
+    border-radius: 50px;
+
+
+    
+
+
+}
+#text p{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    
+    font-size:  70px;
+    display: inline-block;
+}
+
+#image1{
+    background-image: url(https://futurecio.tech/wp-content/uploads/2024/11/pexels-googledeepmind-17486099-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: image1;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+    
+#image2{
+
+        background-image: url(https://pbs.twimg.com/media/F6jviwQWoAAtMDP.jpg);
+    background-size: cover;
+    background-position: center;
+        border-radius: 50px;
+
+    grid-area: image2;
+    background-color: white;
+
+}
+#image3{
+    background-image: url(https://neotes.com/wp-content/uploads/neotes-WissenschaftlicherAnspruch.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+
+    grid-area: image3;
+    background-color: white;
+
+}
+#but{
+        border-radius: 50px;
+
+    grid-area: but;
+    background-color: white;
+
+
+}
+footer{
+    grid-area: footer;
+    background-color: white;
+
+}
+
+#random{
+    margin-left:10px ;
+    margin-right: 20px;
+    background-image: url(https://dkrxqpdgyal83.cloudfront.net/blog/wp-content/uploads/2023/09/27164550/Ali-Phi-cover-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 130px;
+    height: 50px;
+    border-radius: 40px;
+    display: inline-block;
+    
+}
+
+#random1{
+    padding: 5px;
+    margin-left:10px ;
+    margin-right: 20px;
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid black;
+    position: relative;
+
+    
+}
+#random1 i{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+#random1 h6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12px;
+}
+
+#textt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#but{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 30px;
+    gap: 20px;
+
+}
+#but button{
+    background-color: rgba(0, 0, 0, 0.861);
+    color: white;
+    padding : 15px 20px;
+    border-radius: 40px;
+    border: none;
+    text-transform: uppercase;
+}
+#but a{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+ 
+}
+
+footer {
+    padding-left : 30px;
+    padding : 20px;
+    border-radius: 50px;
+
+}
+#top{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+}
+#bottom{
+    background-color: white;
+    height: 80%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+
+}
+#bottom img{
+    width: 150px;
+    height: 80px;
+
+}

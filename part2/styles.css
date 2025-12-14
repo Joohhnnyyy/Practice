@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 120%;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(183, 227, 254);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box6,
+#box7,
+#box8 {
+  height: 370px;
+  width: 300px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+#box1 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box1 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box1 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box1 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box2 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box2 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box2 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box2 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box3 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box3 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box3 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box3 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box4 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box4 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box4 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box4 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box5 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box5 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box5 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box5 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box6 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box6 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box6 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box6 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box7 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box7 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box7 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box7 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box8 img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#box8 h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#box8 p {
+  font-size: 17px;
+  font-weight: 100;
+  color: #888;
+  text-align: center;
+}
+
+#box8 button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(28, 168, 255);
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
