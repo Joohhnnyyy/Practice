@@ -7,5 +7,5 @@ allelems.forEach(function(elem) {
   }else{
       elem.childNodes[3].innerHTML = 'Add Friend';
   }
-});
+} );
 });

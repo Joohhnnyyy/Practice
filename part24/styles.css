@@ -57,6 +57,12 @@ main section .all-reels .reels .right {
   gap: 15px;
   cursor: pointer;
 }
+main section .all-reels .reels .right div h4 {
+  pointer-events: none;
+}
+main section .all-reels .reels .right div h6 {
+  pointer-events: none;
+}
 main section .all-reels .reels .right .count {
   font-size: 15px;
 }

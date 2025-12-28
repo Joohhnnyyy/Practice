@@ -111,36 +111,39 @@ const reels = [
   }
 ];
 
-var sum = '';
+const allReels = document.querySelector(".all-reels");
 
-reels.forEach(function(elem){
-  sum = sum + `<div class="reels">
+function addData(){
+  var sum = '';
+  
+  reels.forEach(function(elem,idx){
+    sum = sum + `        <div class="reels">
           <video muted autoplay loop src="${elem.video}"></video>
           <div class="bottom">
             <div class="user">
               <img src="${elem.userProfile}" alt="">
               <h4>${elem.username}</h4>
-              <button>${elem.isFollow ? "Unfollow" : "Follow"}</button>
+              <button id = "follow-${idx}" class = "follow" >${elem.isFollow ? "Unfollow" : "Follow"}</button>
             </div>
-            <h3>${elem.caption}<h3>
+            <h3>${elem.caption}</h3>
           </div>
           <div class="right">
-            <div class="like">
-            <h3 class="like-icon">${elem.isLinked?'<i class="ri-heart-fill"></i>':'<i class="ri-heart-line"></i>'}</h3>
-            <h3 class="count">${elem.likeCount}</h3>
+            <div id = "like-${idx}" class="like">
+              <h3 class="like-icon"><i class="ri-heart-fill"></i></h3>
+              <h3 class="count">${elem.likeCount}</h3>
             </div>
             <div class="chat">
-              <i class="ri-chat-3-line"></i> 
+              <h3 class="chat-icon"><i class="ri-chat-3-line"></i></h3>
               <h3 class="count">${elem.commentCount}</h3>
             </div>
 
             <div class="share">
-              <i class="ri-share-forward-fill"></i>
+              <h3 class="share-icon"><i class="ri-share-forward-fill"></i></h3>
               <h3 class="count">${elem.shareCount}</h3>
             </div>
 
             <div class="send">
-              <i class="ri-send-plane-fill"></i>
+              <h3 class="send-icon"><i class="ri-send-plane-fill"></i></h3>
               <h3 class="count">73</h3>
             </div>
           
@@ -150,10 +153,46 @@ reels.forEach(function(elem){
             </div>
           </div>
         
-        </div>
-`;
+        </div>`;
+  
+  })
+  
+  allReels.innerHTML = sum;
+
+}
+addData()
+
+
+allReels.addEventListener('click', function (dets) {
+
+  if (dets.target.className == 'like') {
+    if (!reels[dets.target.id].isLiked) {
+      reels[dets.target.id].likeCount++
+      reels[dets.target.id].isLiked = true
+    } else {
+      reels[dets.target.id].likeCount--
+      reels[dets.target.id].isLiked = false
+    }
+
+    addData()
+  }
+  if (dets.target.className == 'follow') {
+    if (!reels[dets.target.id].isFollowed) {
+      reels[dets.target.id].isFollowed = true
+    } else {
+      reels[dets.target.id].isFollowed = false
+    }
+
+    addData()
+  }
+
+ if (dets.target.className == 'mute') {
+    if (!reels[dets.target.id].ismuted) {
+      reels[dets.target.id].ismuted = true
+    } else {
+      reels[dets.target.id].ismuted = false
+    }
+    addData()
+  }
 
 })
-
-var allReels = document.querySelector(".all-reels");
-allReels.innerHTML = sum;

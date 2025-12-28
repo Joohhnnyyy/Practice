@@ -59,6 +59,14 @@ main{
           gap: 15px;
           cursor: pointer;
 
+          div h4{
+            pointer-events: none;
+          }
+          div h6{
+            pointer-events: none;
+          }
+
+
           .count{
             font-size: 15px;
           }
