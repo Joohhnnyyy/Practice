@@ -1,15 +1,20 @@
 const para = document.querySelector('p');
-const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const text = para.innerText;
-para.addEventListener('mouseenter', function() {
+let iteration = 0;
 
+para.addEventListener('mouseenter',()=>{
+function randomText(){
+  const str = text.split('').map((char,index)=>{
+    if(index < iteration){
+      return char;
+    }
+    return characters.split('')[Math.floor(Math.random()*characters.length)];
+  }).join('');
+  para.innerText = str;
+  iteration += 0.2  ;
 
-  setInterval(() => {
-    const str = text.split('').map((char,index) => {
-      return characters[Math.floor(Math.random() * characters.length)];
-    }).join('');
-    para.innerText = str;
-  }, 50);
+}
 
-
+setInterval(randomText,30);
 });
