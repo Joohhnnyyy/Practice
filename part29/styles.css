@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: monospace;
+  width: 100%;
+  background-color: #222;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  anchor-name: --random-anchor;
+}
+body .box {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+body .box:hover {
+  anchor-name: --random-anchor;
+}
+body .red {
+  background-color: rgba(255, 0, 0, 0.482);
+}
+body .blue {
+  background-color: rgba(0, 0, 255, 0.482);
+}
+body .green {
+  background-color: rgba(0, 128, 0, 0.482);
+}
+body .anchor {
+  background-color: rgb(245, 245, 245);
+  border: 20px;
+  position: absolute;
+  border-radius: 10px;
+  position-anchor: --random-anchor;
+  top: anchor(top);
+  left: anchor(left);
+  bottom: anchor(bottom);
+  right: anchor(right);
+  pointer-events: none;
+  transition: all 0.3s linear;
+  mix-blend-mode: exclusion;
+}/*# sourceMappingURL=styles.css.map */

@@ -45,8 +45,23 @@ body{
     // box-shadow: 0 0 30px red;
     background:linear-gradient(rgba(0, 0, 0, 0.988)) padding-box,
     conic-gradient(from var(--rotate) , #e72020, #223057, #e72020,   #223057) border-box;
-    border: 2px solid rgba(245, 245, 245, 0);
+    border: 0px solid rgba(245, 245, 245, 0);
     animation: borderAnimation 2s linear infinite;
+    animation-play-state: paused;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0px #e72020;
+    color: whitesmoke;
+    text-shadow: 0 0 20px #e72020;
+    &:hover{
+      animation-play-state: running;
+      border: 5px solid rgba(245, 245, 245, 0);
+      box-shadow: 0 0 70px #e72020;
+      color: #e72020;
+      text-shadow: 0 0 0px #e72020;
+
+
+
+    }
     img{
       width: 100%;
       height: 100%;
