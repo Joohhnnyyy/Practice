@@ -6,29 +6,35 @@
 
 body, html {
   height: 100%;
-  font-family: monospace;
-  width: 100%;
   background-color: black;
+  width: 100%;
+  font-family: monospace;
 }
 
+@property --bgcolor {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: red;
+}
+@keyframes bgAnimation {
+  from {
+    --bgcolor: red;
+    border: 5px solid yellow;
+  }
+  to {
+    --bgcolor: yellow;
+    border: 5px solid red;
+  }
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@keyframes changeBackgroundColor {
-  from {
-    box-shadow: 0 0 100px red;
-  }
-  to {
-    box-shadow: 0 0 150px blue;
-  }
-}
 body .box {
-  padding: 30px;
-  width: 500px;
+  width: 400px;
   height: 700px;
-  border-radius: 20px;
-  background-color: white;
-  animation: changeBackgroundColor 1s infinite alternate;
+  border: 5px solid white;
+  background-color: var(--bgcolor);
+  animation: bgAnimation 3s infinite alternate;
 }/*# sourceMappingURL=styles.css.map */
