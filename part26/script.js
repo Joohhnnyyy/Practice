@@ -2,8 +2,6 @@ const para = document.querySelector('p');
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const text = para.innerText;
 let iteration = 0;
-
-para.addEventListener('mouseenter',()=>{
 function randomText(){
   const str = text.split('').map((char,index)=>{
     if(index < iteration){
@@ -12,9 +10,8 @@ function randomText(){
     return characters.split('')[Math.floor(Math.random()*characters.length)];
   }).join('');
   para.innerText = str;
-  iteration += 0.2  ;
+  iteration += 0.2;
 
 }
 
-setInterval(randomText,30);
-});
+setInterval(randomText,300);

@@ -111,88 +111,58 @@ const reels = [
   }
 ];
 
-const allReels = document.querySelector(".all-reels");
-
 function addData(){
   var sum = '';
   
   reels.forEach(function(elem,idx){
-    sum = sum + `        <div class="reels">
-          <video muted autoplay loop src="${elem.video}"></video>
-          <div class="bottom">
-            <div class="user">
-              <img src="${elem.userProfile}" alt="">
-              <h4>${elem.username}</h4>
-              <button id = "follow-${idx}" class = "follow" >${elem.isFollow ? "Unfollow" : "Follow"}</button>
+    sum = sum + `<div class="reels">
+            <video muted autoplay loop src="${elem.video}"></video>
+            <div class="bottom">
+              <div class="user">
+                <img src="${elem.userProfile}" alt="">
+                <h4>${elem.username}</h4>
+                <button>${elem.isFollow ? "Unfollow" : "Follow"}</button>
+              </div>
+              <h3>${elem.caption}<h3>
             </div>
-            <h3>${elem.caption}</h3>
-          </div>
-          <div class="right">
-            <div id = "like-${idx}" class="like">
-              <h3 class="like-icon"><i class="ri-heart-fill"></i></h3>
+            <div class="right">
+              <div id = ${idx} class="like">
+              <h3 class="like-icon">${elem.isLinked?'<i class="ri-heart-fill"></i>':'<i class="ri-heart-line"></i>'}</h3>
               <h3 class="count">${elem.likeCount}</h3>
-            </div>
-            <div class="chat">
-              <h3 class="chat-icon"><i class="ri-chat-3-line"></i></h3>
-              <h3 class="count">${elem.commentCount}</h3>
-            </div>
-
-            <div class="share">
-              <h3 class="share-icon"><i class="ri-share-forward-fill"></i></h3>
-              <h3 class="count">${elem.shareCount}</h3>
-            </div>
-
-            <div class="send">
-              <h3 class="send-icon"><i class="ri-send-plane-fill"></i></h3>
-              <h3 class="count">73</h3>
+              </div>
+              <div class="chat">
+                <i class="ri-chat-3-line"></i> 
+                <h3 class="count">${elem.commentCount}</h3>
+              </div>
+  
+              <div class="share">
+                <i class="ri-share-forward-fill"></i>
+                <h3 class="count">${elem.shareCount}</h3>
+              </div>
+  
+              <div class="send">
+                <i class="ri-send-plane-fill"></i>
+                <h3 class="count">73</h3>
+              </div>
+            
+              <div class="menu">
+  
+                <i class="ri-more-2-line"></i>
+              </div>
             </div>
           
-            <div class="menu">
-
-              <i class="ri-more-2-line"></i>
-            </div>
           </div>
-        
-        </div>`;
+  `;
   
   })
   
+  var allReels = document.querySelector(".all-reels");
   allReels.innerHTML = sum;
 
 }
 addData()
 
+allReels.addEventListener('click',function(){
+  console.log('hey');
 
-allReels.addEventListener('click', function (dets) {
-
-  if (dets.target.className == 'like') {
-    if (!reels[dets.target.id].isLiked) {
-      reels[dets.target.id].likeCount++
-      reels[dets.target.id].isLiked = true
-    } else {
-      reels[dets.target.id].likeCount--
-      reels[dets.target.id].isLiked = false
-    }
-
-    addData()
-  }
-  if (dets.target.className == 'follow') {
-    if (!reels[dets.target.id].isFollowed) {
-      reels[dets.target.id].isFollowed = true
-    } else {
-      reels[dets.target.id].isFollowed = false
-    }
-
-    addData()
-  }
-
- if (dets.target.className == 'mute') {
-    if (!reels[dets.target.id].ismuted) {
-      reels[dets.target.id].ismuted = true
-    } else {
-      reels[dets.target.id].ismuted = false
-    }
-    addData()
-  }
-
-})
+});
