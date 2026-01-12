@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  height: 100%;
+  display: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.background .click-option {
+  position: absolute;
+  height: 180px;
+  width: 190px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  opacity: 1;
+  color: white;
+  font-family: monospace;
+}
+.background .bg-img {
+  height: 100%;
+  width: 100%;
+}
+.background .right {
+  height: 80%;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px);
+  gap: 30px;
+  align-content: start; /* fill from top */
+}
+.background .right .folder-img {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.background .bottom {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  transform: translate(-50% -50%);
+}
+.background .bottom:hover .dock {
+  transform: translateY(0%);
+}
+.background .bottom .dock {
+  padding: 20px;
+  height: 10%;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 3%;
+  transform: translateY(130%);
+  transition: transform 0.35s cubic-bezier(0.25, 1.4, 0.5, 1), opacity 0.25s ease;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+}
+.background .bottom .icons {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+.background .bottom .icons:hover {
+  transform: scale(1.6);
+}/*# sourceMappingURL=styles.css.map */

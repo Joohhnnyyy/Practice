@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  height: 100%;
+  width:100%;
+
+
+
+}
+@mixin centerFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background{
+  height: 100%;
+  display: relative;
+  width:100%;
+  @include centerFlex;
+  flex-direction: column;
+  background-size: cover;
+  object-fit: cover;
+  // background-image: url(bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat; 
+  overflow: hidden;
+
+  .click-option{
+    position: absolute;
+    height: 180px;
+    width: 190px;
+    padding: 10px 20px;
+    // background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    gap: 6px;
+      background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  opacity: 1;
+
+  color: white;
+  font-family: monospace;
+  
+  }
+
+  .bg-img{
+    height: 100%;
+    width: 100%;
+
+  }
+
+
+  .right{
+  height: 80%;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  // background-color: azure;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px);
+  gap: 30px;
+
+  align-content: start;   /* fill from top */
+    
+    .folder-img{
+      height: 70px;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      // position: absolute;
+      border-radius: 5px;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+//     .folder1{
+
+//       .folder-img{
+//     height: 70px;
+//     width: 70px;
+//     // position: absolute;
+//     border-radius: 5px;
+//     gap: 10px;
+    
+//   }
+// }
+//     .folder2{
+//       .folder-img{
+//         height: 70px;
+//         width: 70px;
+//         border-radius: 5px;
+//         gap: 10px;
+//         top: 100px;
+//       }
+//     }
+//     .folder3{
+      
+//       .folder-img{
+//         height: 70px;
+//         width: 70px;
+//         // position: absolute;
+//         border-radius: 5px;
+//         gap: 10px;
+//         top: 200px;
+//       }
+//     }
+}
+  .bottom{
+    height : 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    position: fixed;
+      justify-content: center;
+    transform: translate(-50% -50%);
+    &:hover {
+      .dock {
+        transform: translateY(0%);
+      }
+    }
+
+.dock {
+  padding: 20px;
+  height: 10%;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 3%;
+  transform: translateY(130%);
+    transition:
+    transform 0.35s cubic-bezier(.25, 1.4, .5, 1),
+    opacity 0.25s ease;
+
+
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+}
+
+.icons {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+.icons:hover{
+  transform: scale(1.6);
+}
+
+    }
+  }
+
+
