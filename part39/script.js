@@ -39,20 +39,43 @@
 // }
 // fetchWeatherData("noida");
 
-async function fetchWeatherData(city) {
+// async function fetchWeatherData(city) {
+//   try{
+//     let apikey = "8802860be9a6b98bcce92605f56b0cfc"
+//     let rawdata = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`);
+//     if(!rawdata.ok){
+//       throw new Error("City not found");
+//     }
+//     let data = await rawdata.json();
+//     console.log(data);
+//   }
+//   catch(error){
+//     console.log("Error:", error.message);
+//   }
+// }
+// fetchWeatherData("noida");
+
+
+async function fetchWeatherData(city){
   try{
     let apikey = "8802860be9a6b98bcce92605f56b0cfc"
-    let rawdata = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`);
-    if(!rawdata.ok){
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
+    if(!response.ok){
       throw new Error("City not found");
     }
-    let data = await rawdata.json();
+    let data = await response.json();
+    if(data.main.temp < 0){
+      console.warn("It's freezing cold in", city);
+    }
+    else{
+      console.warn("The temperature in", city, "is", data.main.temp, "°C");
+    }
     console.log(data);
   }
   catch(error){
     console.log("Error:", error.message);
   }
 }
-fetchWeatherData("noidaa");
+fetchWeatherData("noida");
 
 
