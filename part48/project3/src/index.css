@@ -1,0 +1,539 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: monospace;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.Home {
+  width: 100%;
+  height: 300vh;
+}
+.Home .Section_1 {
+  width: 100%;
+  height: 100vh;
+}
+.Home .Section_1 .Hero {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.Home .Section_1 .Hero .hero-content-1 {
+  color: white;
+  width: 800px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Home .Section_1 .Hero .hero-content-1 h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1;
+  text-align: center;
+}
+.Home .Section_1 .Hero .hero-content-2 {
+  color: white;
+  width: 600px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Home .Section_1 .Hero .hero-content-2 p {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+  text-align: center;
+}
+.Home .Section_1 .Hero .start-your-journey {
+  background-color: black;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+}
+.Home .Section_1 .Hero .start-your-journey:hover {
+  background-color: darkgray;
+}
+.Home .Section_1 .Hero .start-your-journey .start-journey-btn {
+  padding: 10px 10px;
+  font-size: 1.3rem;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+.Home .Section_1 .Hero .image-section {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  position: relative;
+}
+.Home .Section_1 .Hero .image-section .left-corner {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 23px;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: rgba(245, 245, 245, 0.532);
+}
+.Home .Section_1 .Hero .image-section .left-corner .left-corner-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Home .Section_1 .Hero .image-section .Hero-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  padding: 10px;
+}
+.Home .Section_1 .navigation-bar {
+  width: 100%;
+  height: 10vh;
+  padding: 1rem;
+}
+.Home .Section_1 .navigation-bar .navigation-elements {
+  padding: 1rem;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Home .Section_1 .navigation-bar .navigation-elements .logo {
+  font-weight: 100;
+  font-size: 1rem;
+}
+.Home .Section_1 .navigation-bar .navigation-elements .about-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  gap: 20px;
+  width: 60%;
+  font-size: 1rem;
+  color: black;
+}
+.Home .Section_1 .navigation-bar .navigation-elements .about-section a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.Home .Section_1 .navigation-bar .navigation-elements .book-button {
+  padding: 1rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 100;
+}
+.Home .Section_2 {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 2px solid lightgray;
+}
+.Home .Section_2 .section-2a {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+  gap: 20px;
+}
+.Home .Section_2 .section-2a .about-content {
+  width: 60%;
+  height: 90px;
+  font-size: 1.2rem;
+}
+.Home .Section_2 .section-2a .about-button {
+  height: 40px;
+  width: 120px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.Home .Section_2 .section-2b {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 4rem 3rem;
+  gap: 30px;
+}
+.Home .Section_2 .section-2b .card1 {
+  background-color: rgba(8, 8, 44, 0.863);
+  width: 35%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Home .Section_2 .section-2b .card1 .card1-content {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2b .card1 .ri-government-line {
+  font-size: 3rem;
+  color: white;
+}
+.Home .Section_2 .section-2b .card1 .game-modes {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: left;
+  align-items: center;
+}
+.Home .Section_2 .section-2b .card1 .game-modes .game-mode {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.Home .Section_2 .section-2b .card1 .game {
+  width: 80px;
+  height: 30px;
+  background-color: skyblue;
+  border-radius: 20px;
+}
+.Home .Section_2 .section-2b .card2 {
+  background-color: coral;
+  width: 35%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+}
+.Home .Section_2 .section-2b .card2 .card2-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Home .Section_2 .section-2b .card2 .private-btn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 2px solid black;
+  border-radius: 50px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Home .Section_2 .section-2b .card3 {
+  background-color: rgb(216, 216, 216);
+  width: 35%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Home .Section_2 .section-2b .card3 > h1 {
+  color: black;
+  font-size: 4rem;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2b .card3 > h3 {
+  color: rgba(0, 0, 0, 0.504);
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2b .card3 > p {
+  color: rgba(0, 0, 0, 0.539);
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2c {
+  width: 100%;
+  height: 30vh;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  top: 0;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2c > p {
+  font-size: 2rem;
+  font-weight: 100;
+  color: black;
+}
+.Home .Section_2 .section-2c .rating {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20vh;
+  justify-content: space-evenly;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.Home .Section_2 .section-2c .rating .hours h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  color: black;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2c .rating .hours h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  color: gray;
+}
+.Home .Section_2 .section-2c .rating .retention h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  color: black;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2c .rating .retention h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  color: gray;
+}
+.Home .Section_2 .section-2c .rating .members h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  color: black;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2c .rating .members h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  color: gray;
+}
+.Home .Section_2 .section-2c .rating .tournaments h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  color: black;
+  font-weight: 100;
+}
+.Home .Section_2 .section-2c .rating .tournaments h3 {
+  font-size: 1rem;
+  font-weight: 100;
+  color: gray;
+}
+.Home .Section_3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+}
+.Home .Section_3 .section-3a {
+  height: 60%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 10px;
+}
+.Home .Section_3 .section-3a .section-3-heading {
+  font-size: 2rem;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 50px;
+}
+.Home .Section_3 .section-3a .service-btn {
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 2px solid grey;
+  border-radius: 20px;
+  color: black;
+  font-weight: 100;
+}
+.Home .Section_3 .section-3a .explore-btn {
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: black;
+  border-radius: 20px;
+  color: white;
+  font-weight: 100;
+}
+.Home .Section_3 .section-3b {
+  height: 50%;
+  width: 30%;
+  background-color: lightblue;
+  background-image: url(https://images.unsplash.com/flagged/photo-1572987337946-de0a00159d91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 20px;
+}
+.Home .Section_3 .section-3b .card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 200px;
+  position: relative;
+}
+.Home .Section_3 .section-3b .card-1 .bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  justify-content: space-between;
+  top: 260px;
+}
+.Home .Section_3 .section-3b .card-1 .bottom .card-heading {
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+  width: 60%;
+}
+.Home .Section_3 .section-3b .card-1 .bottom .arrow-left {
+  background-color: black;
+  height: 45px;
+  width: 45px;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.621);
+  font-size: 30px;
+  border-radius: 50%;
+}
+.Home .Section_3 .section-3b .training-btn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 2px solid black;
+  border-radius: 50px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Home .Section_3 .section-3c {
+  height: 50%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.Home .Section_3 .section-3c .card-2 {
+  padding: 20px;
+  width: 100%;
+  height: 60%;
+  background-color: white;
+  border-radius: 30px;
+  background-image: url(https://images.unsplash.com/photo-1625480859582-03ea1d0e88fe?q=80&w=2161&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.Home .Section_3 .section-3c .card-2 .court-btn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 2px solid black;
+  border-radius: 50px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Home .Section_3 .section-3c .card-2 .cart-content {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.Home .Section_3 .section-3c .bottom-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 40px;
+}
+.Home .Section_3 .section-3c .bottom-section .arrows {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.Home .Section_3 .section-3c .bottom-section .arrows .left, .Home .Section_3 .section-3c .bottom-section .arrows .right {
+  margin-top: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.438);
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  padding: 5px;
+  font-size: 30px;
+  border-radius: 50%;
+}/*# sourceMappingURL=index.css.map */
